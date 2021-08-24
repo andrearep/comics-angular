@@ -1,14 +1,14 @@
 
 <div class="form_container">
   <h3>Login</h3>
-  <form>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
-      <label for="username">Username</label>
+      <label for="email">email</label>
       <input
         class="form-control"
         type="text"
-        name="username"
-        id="username"
+        id="email"
+        formControlName="email"
         >
     </div>
     <div class="form-group">
@@ -16,10 +16,10 @@
       <input
         class="form-control"
         type="text"
-        name="password"
         id="password"
+        formControlName="password"
         >
     </div>
-    <button type="submit" class="btn btn-primary">Login</button>
+    <button [disabled]='loginForm.invalid' type="submit" class="btn btn-primary">Login</button>
   </form>
 </div>
