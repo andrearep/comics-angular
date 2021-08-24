@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ComicComponent } from './comics/comic/comic.component';
 import { ComicEditComponent } from './comics/comic/comic-edit/comic-edit.component';
+import { AuthGuardService } from './auth/auth-guard';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { ComicEditComponent } from './comics/comic/comic-edit/comic-edit.compone
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
