@@ -1,1 +1,14 @@
+<h1 class="mb-3 text-center">COMICS SHOP</h1>
+<div class="row d-flex justify-content-around">
 
+    <div class="card mb-4"  *ngFor="let comic of comics" >
+      <img [src]="comic.imgPath" alt="" class="card-img-top" style="height:25rem;">
+
+    <div class="card-body">
+      <h3 class="card-title">{{comic.title}}</h3>
+      <p class="card-text text-justify">{{ comic.summary | maxLength: 150 }}</p>
+      <button class="btn btn-primary" style="text-align: right;">Dettagli</button>
+    </div>
+  </div>
+
+</div>

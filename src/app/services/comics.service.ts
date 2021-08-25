@@ -1,5 +1,6 @@
 import { Injectable, OnInit } from '@angular/core';
 import { Comic } from '../comics/comic/comic.model';
+import { comics } from 'src/assets/assets';
 
 @Injectable({
   providedIn: 'root'
@@ -10,13 +11,15 @@ export class ComicsService implements OnInit {
 
 
   constructor() {
-    this.comicsArray = [
-      new Comic (1,'doraemon', 'https://images-na.ssl-images-amazon.com/images/I/71f0qgBb50L.jpg', '')
-    ]
+    this.comicsArray = comics;
    }
 
   ngOnInit() {
 
+  }
+
+  getComics() {
+    return this.comicsArray.slice();
   }
 
 }

@@ -11,6 +11,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ComicComponent } from './comics/comic/comic.component';
 import { ComicEditComponent } from './comics/comic/comic-edit/comic-edit.component';
 import { AuthGuardService } from './auth/auth-guard';
+import { MaxLengthPipe } from './pipes/max-length.pipe';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,8 @@ import { AuthGuardService } from './auth/auth-guard';
     ComicsComponent,
     ComicComponent,
     ComicEditComponent,
+    MaxLengthPipe
+
 
   ],
   imports: [
